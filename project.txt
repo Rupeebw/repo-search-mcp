@@ -1,0 +1,44 @@
+"""
+GitLab Repository Analyzer - Project Structure
+
+This is the recommended file structure for the GitLab Repository Analyzer.
+Each file is separated by function to maintain clean separation of concerns.
+"""
+
+gitlab_analyzer/
+├── __init__.py                  # Package marker
+├── main.py                      # Entry point
+├── config.py                    # Configuration management
+├── core/
+│   ├── __init__.py
+│   ├── scanner.py               # Base scanner functionality
+│   ├── repository.py            # Repository data model
+│   └── utils.py                 # Helper functions
+├── detectors/
+│   ├── __init__.py
+│   ├── base_detector.py         # Base detector class
+│   ├── frontend.py              # Frontend framework detection
+│   ├── backend.py               # Backend technology detection
+│   ├── database.py              # Database technology detection
+│   ├── infrastructure.py        # IaC detection
+│   └── cicd.py                  # CI/CD configuration detection
+├── analyzers/
+│   ├── __init__.py
+│   ├── connection.py            # Repository connection analysis
+│   ├── dependency.py            # Dependency analysis
+│   └── documentation.py         # Documentation extraction
+├── reporting/
+│   ├── __init__.py
+│   ├── summary.py               # Summary report generation
+│   ├── visualization.py         # Data for visualizations
+│   └── exporters.py             # Export to different formats
+└── cli/
+    ├── __init__.py
+    ├── menu.py                  # Interactive menu system
+    ├── input.py                 # Input helper functions
+    └── display.py               # Display formatting
+
+# To install and run:
+# 1. Clone this repository
+# 2. Install dependencies: pip install -r requirements.txt
+# 3. Run the analyzer: python -m gitlab_analyzer.main

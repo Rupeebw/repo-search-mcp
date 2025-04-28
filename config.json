@@ -1,0 +1,48 @@
+{
+  "gitlab": {
+    "url": "https://gitlab.com",
+    "token": "YOUR_GITLAB_TOKEN",
+    "group_id": "YOUR_GROUP_ID",
+    "timeout": 30
+  },
+  "scanning": {
+    "concurrent_scans": 5,
+    "timeout_seconds": 30,
+    "file_extensions": [
+      ".py", 
+      ".js", 
+      ".java", 
+      ".go", 
+      ".rb", 
+      ".php", 
+      ".ts", 
+      ".jsx", 
+      ".tsx", 
+      ".yml", 
+      ".yaml", 
+      ".json", 
+      ".tf", 
+      ".md", 
+      ".html", 
+      ".css", 
+      ".scss"
+    ]
+  },
+  "detectors": {
+    "frontend": true,
+    "backend": true,
+    "database": true,
+    "infrastructure": true,
+    "cicd": true,
+    "custom_patterns": []
+  },
+  "analyzers": {
+    "connections": true,
+    "dependencies": true,
+    "documentation": true
+  },
+  "reporting": {
+    "format": "json",
+    "verbosity": "normal"
+  }
+}
